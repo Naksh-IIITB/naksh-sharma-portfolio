@@ -52,16 +52,17 @@ button { color: inherit; }
 .section-note { width: 280px; margin: 0 0 3px; color: #8d9088; font-size: 12px; line-height: 1.75; }
 .featured-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
 .project-card { position: relative; isolation: isolate; min-height: 305px; display: flex; flex-direction: column; justify-content: space-between; padding: 22px 23px 20px; overflow: hidden; background: var(--panel); border: 1px solid #ffffff0a; animation: card-arrive .55s both; animation-delay: calc(var(--card-order, 0) * 65ms); transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease; }
-.project-card::before { position: absolute; z-index: 0; top: -115px; right: -100px; width: 290px; height: 290px; border-radius: 50%; background: radial-gradient(circle, color-mix(in srgb, var(--project-accent) 19%, transparent), transparent 68%); content: ""; pointer-events: none; animation: ambient-drift 12s ease-in-out infinite alternate; }
-.project-card:hover { transform: translateY(-4px); box-shadow: 0 15px 40px #0005; }
+.project-card::before { position: absolute; z-index: 0; inset: -55%; background: conic-gradient(from 0deg, transparent 0 28%, color-mix(in srgb, var(--project-accent) 32%, transparent) 39%, color-mix(in srgb, var(--project-wash) 46%, transparent) 47%, transparent 59% 74%, color-mix(in srgb, var(--project-accent) 22%, transparent) 83%, transparent 92%); content: ""; pointer-events: none; opacity: .35; filter: blur(28px); -webkit-mask-image: radial-gradient(ellipse, #000 18%, transparent 69%); mask-image: radial-gradient(ellipse, #000 18%, transparent 69%); animation: background-swirl 24s linear infinite; }
+.project-card:hover { transform: perspective(900px) translateY(-5px) rotateX(1deg) rotateY(-.7deg); box-shadow: 0 15px 40px #0005; }
 .card-topline { position: relative; z-index: 2; display: flex; justify-content: space-between; color: #8e9188; font: 8px var(--mono); letter-spacing: .12em; }
 .project-brand { position: absolute; top: 53px; right: 23px; z-index: 1; display: flex; align-items: center; gap: 8px; color: var(--project-accent); }
-.project-emblem { display: grid; width: 46px; height: 46px; place-items: center; border: 1px solid color-mix(in srgb, var(--project-accent) 46%, transparent); border-radius: 13px; background: color-mix(in srgb, var(--project-accent) 13%, #171916); color: var(--project-accent); animation: emblem-float 5s ease-in-out infinite; }
+.project-emblem { display: grid; width: 46px; height: 46px; place-items: center; border: 1px solid color-mix(in srgb, var(--project-accent) 46%, transparent); border-radius: 13px; background: color-mix(in srgb, var(--project-accent) 13%, #171916); color: var(--project-accent); transition: transform .65s cubic-bezier(.2,.8,.2,1); }
+.project-card:hover .project-emblem { transform: perspective(400px) rotateY(180deg); }
 .project-emblem svg { width: 27px; height: 27px; }
 .brand-monogram { font: 600 10px var(--mono); letter-spacing: .04em; }
 .emblem-orbit { display: none; }
 .project-emblem::before, .project-emblem::after { display: none; }
-.card-content { position: relative; z-index: 2; max-width: 75%; }
+.card-content { position: relative; z-index: 2; max-width: 75%; animation: content-slide-in .6s both; animation-delay: calc(var(--card-order, 0) * 65ms); }
 .card-tags { display: flex; gap: 7px; margin-bottom: 11px; }
 .card-tags span { padding: 5px 7px; border: 1px solid color-mix(in srgb, var(--project-accent) 27%, transparent); border-radius: 3px; color: #c5c6bf; font: 8px var(--mono); letter-spacing: .06em; text-transform: uppercase; }
 .card-content h3 { margin: 0 0 8px; font: 600 25px var(--display); letter-spacing: -.055em; }
@@ -88,9 +89,9 @@ button { color: inherit; }
 .project-card:hover { border-color: color-mix(in srgb, var(--project-accent) 65%, #2b2e29); }
 .skeleton-card { min-height: 337px; background: linear-gradient(100deg,#191b18 35%,#20231d 50%,#191b18 65%); background-size: 200% 100%; animation: shimmer 1.6s linear infinite; }
 @keyframes shimmer { to { background-position: -200% 0; } }
-@keyframes card-arrive { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes ambient-drift { from { transform: translate3d(-12px, 8px, 0) scale(.92); opacity: .65; } to { transform: translate3d(12px, -8px, 0) scale(1.08); opacity: 1; } }
-@keyframes emblem-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+@keyframes card-arrive { from { opacity: 0; translate: 0 14px; } to { opacity: 1; translate: 0 0; } }
+@keyframes background-swirl { to { transform: rotate(1turn); } }
+@keyframes content-slide-in { from { opacity: 0; translate: 0 18px; } to { opacity: 1; translate: 0 0; } }
 
 .archive-section { padding-top: 104px; padding-bottom: 104px; }
 .archive-heading { margin-bottom: 34px; }
@@ -135,6 +136,8 @@ button { color: inherit; }
 .project-dialog { width: min(940px, calc(100% - 32px)); max-width: 940px; max-height: min(90vh, 900px); padding: 0; overflow: auto; border: 1px solid #394047; border-radius: 14px; background: #14171a; color: var(--ink); box-shadow: 0 24px 100px #000b; }
 .project-dialog::backdrop { background: #080b10cc; backdrop-filter: blur(7px); }
 .dialog-shell { position: relative; }
+.project-dialog[open] .presentation-brand { animation: presentation-flip-in .65s cubic-bezier(.2,.8,.2,1) both; }
+@keyframes presentation-flip-in { from { opacity: 0; transform: perspective(600px) rotateY(-70deg) scale(.9); } to { opacity: 1; transform: perspective(600px) rotateY(0) scale(1); } }
 .dialog-close { position: sticky; z-index: 3; top: 15px; float: right; display: grid; width: 38px; height: 38px; margin: 15px 15px -53px 0; place-items: center; border: 1px solid #ffffff26; border-radius: 50%; background: #15181ddd; color: white; cursor: pointer; font-size: 24px; }
 .presentation-hero { position: relative; display: flex; min-height: 224px; align-items: center; gap: 28px; padding: 39px 48px; border-bottom: 1px solid #ffffff14; background: linear-gradient(115deg, color-mix(in srgb, var(--project-wash) 78%, #14171a), #14171a 82%); }
 .presentation-brand { display: grid; flex: 0 0 122px; width: 122px; height: 122px; align-content: center; justify-items: center; gap: 8px; border: 1px solid color-mix(in srgb, var(--project-accent) 48%, transparent); border-radius: 26px; background: color-mix(in srgb, var(--project-accent) 12%, #14171a); color: var(--project-accent); }
