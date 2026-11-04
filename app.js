@@ -3,7 +3,7 @@ const FEATURED = [
   {
     name: "InsightGraph",
     category: "AI / KNOWLEDGE SYSTEMS",
-    description: "A local, graph-aware RAG system that connects retrieved context instead of treating every passage as an island.",
+    description: "A local Python RAG project that uses a graph to organize and retrieve context.",
     language: "Python",
     role: "PROJECT",
     logo: "insight",
@@ -11,7 +11,7 @@ const FEATURED = [
   {
     name: "RaceCraft",
     category: "MOTORSPORT / SIMULATION",
-    description: "A Formula 1 strategy simulator for exploring race-day decisions, tyre choices, and changing conditions.",
+    description: "A Python simulator for comparing Formula 1 race strategies.",
     language: "Python",
     role: "PROJECT",
     logo: "race",
@@ -19,7 +19,7 @@ const FEATURED = [
   {
     name: "Sonic-Key",
     category: "ACOUSTICS / PROTOTYPE",
-    description: "An acoustics-led Java prototype exploring a different way to interact with sound.",
+    description: "A Java acoustics prototype.",
     language: "Java",
     role: "PROJECT",
     logo: "sonic",
@@ -28,7 +28,7 @@ const FEATURED = [
     name: "FairSplit",
     aliases: ["aivancity_fairsplit"],
     category: "PROPERTY / COLLABORATION",
-    description: "A team project exploring fair property valuation and how to split shared costs.",
+    description: "A team project from the Aivancity responsible AI workshop on property valuation.",
     role: "COLLABORATION",
     logo: "fair",
   },
@@ -36,7 +36,7 @@ const FEATURED = [
     name: "Agentic Prompt Guard",
     aliases: ["agentic-prompt-guard"],
     category: "AI / OPEN SOURCE",
-    description: "An upstream guardrail for intent analysis, disguised-risk detection, and safer prompt rewriting. My role: contributor.",
+    description: "An upstream guardrail for intent analysis, risk detection, and prompt rewriting. Contributor.",
     role: "CONTRIBUTOR",
     logo: "guard",
   },
@@ -44,7 +44,7 @@ const FEATURED = [
     name: "SML NLP News Classification",
     aliases: ["sml-nlp-project", "sml-nlp-news-classification", "news-classification"],
     category: "NLP / CLASSIFICATION",
-    description: "A machine-learning project exploring news classification with natural language processing.",
+    description: "A machine-learning project for classifying news articles with NLP.",
     role: "PROJECT",
     logo: "news",
   },
@@ -52,7 +52,7 @@ const FEATURED = [
     name: "F1 Strategy Predictor",
     aliases: ["f1-strategy-predictor", "hacknight"],
     category: "MOTORSPORT / PREDICTION",
-    description: "A hacknight project exploring Formula 1 strategy prediction.",
+    description: "A hacknight project for predicting Formula 1 race strategy.",
     role: "PROJECT",
     logo: "predict",
   },
@@ -60,7 +60,7 @@ const FEATURED = [
     name: "DBMS Faculty System",
     aliases: ["dbms-faculty-system"],
     category: "DATABASES / APPLICATION",
-    description: "A database course project centered on a faculty management system.",
+    description: "A database course project for managing faculty information.",
     role: "PROJECT",
     logo: "database",
   },
@@ -68,7 +68,7 @@ const FEATURED = [
     name: "Huffman Compressor",
     aliases: ["com-decomp", "huffman-compressor"],
     category: "ALGORITHMS / COMPRESSION",
-    description: "A compact project exploring Huffman coding for lossless data compression.",
+    description: "A Python command-line utility for lossless file compression with Huffman coding.",
     role: "PROJECT",
     logo: "compress",
   },
@@ -133,8 +133,7 @@ function featuredCard(item, repo, index) {
   const href = repo ? repoUrl(repo) : `https://github.com/${ACCOUNT}?tab=repositories`;
   const language = item.language || repo?.language || "";
   const description = repo?.description && !item.description ? repo.description : item.description;
-  const sizeClass = index === 0 ? " project-card-large" : "";
-  return `<article class="project-card${sizeClass} tone-${item.logo}" style="--card-order:${index}">
+  return `<article class="project-card tone-${item.logo}" style="--card-order:${index}">
     <div class="card-topline"><span>${escapeHtml(item.category)}</span><span>${String(index + 1).padStart(2, "0")} / 0${FEATURED.length}</span></div>
     <div class="project-emblem">${iconFor(item.logo)}<span class="emblem-orbit"></span></div>
     <div class="card-content">
