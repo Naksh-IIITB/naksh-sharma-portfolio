@@ -1,6 +1,11 @@
 const ACCOUNT = "Naksh-IIITB";
 
 const REPOSITORY_NOTES = {
+  "safecross": {
+    name: "SafeCross",
+    category: "EDGE AI / HACKATHON",
+    description: "Offline pedestrian and vehicle counting prototype using an ExecuTorch SSDLite model, with per-frame proximity flags and CSV/summary outputs.",
+  },
   "insightgraph": {
     name: "InsightGraph",
     category: "LOCAL AI / RAG",
@@ -66,6 +71,7 @@ const REPOSITORY_NOTES = {
 };
 
 const REPOSITORY_ORDER = [
+  "safecross",
   "InsightGraph",
   "RaceCraft",
   "sml-nlp-project",

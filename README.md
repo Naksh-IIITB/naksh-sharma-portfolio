@@ -2,7 +2,7 @@
 
 A compact, responsive portfolio built with plain HTML, CSS and JavaScript. Featured project cards are authored in `index.html`; `app.js` handles the searchable GitHub repository list and the browser-side Huffman algorithm demonstration.
 
-The project descriptions are based on public repository documentation. SafeCross is included from the supplied portfolio brief; the linked public GitHub account does not contain its source repository, so the page says so and does not claim implementation details. The prompt-guard card distinguishes the contribution fork from its upstream repository. The Huffman panel implements byte-frequency tree construction, encoding and decoding in the browser; it does not claim to produce the repository's packed file format.
+The project descriptions are based on repository documentation. SafeCross links to its source repository, and the prompt-guard card distinguishes the contribution fork from its upstream repository. The Huffman panel implements byte-frequency tree construction, encoding and decoding in the browser; it does not claim to produce the repository's packed file format.
 
 ## Run locally
 
@@ -24,5 +24,5 @@ In repository **Settings → Pages**, select **GitHub Actions** as the deploymen
 
 - Edit the six statically authored cards and profile sections in `index.html`.
 - Add repository descriptions, display names and categories in `REPOSITORY_NOTES` in `app.js`.
+- The résumé PDF is served from `assets/Naksh_Sharma_Resume.pdf`; update the email, phone and LinkedIn links in the Contact section of `index.html` when those details change.
 - The social preview is `assets/social-preview.jpg`; its editable vector source is `assets/social-preview.svg`.
-- Do not add a résumé link until an actual résumé PDF is available.
