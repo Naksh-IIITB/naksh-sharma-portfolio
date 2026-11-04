@@ -1,23 +1,28 @@
 # Naksh Sharma — Portfolio
 
-A lightweight personal portfolio built with plain HTML, CSS, and JavaScript. The selected-work section gives a curated introduction to projects; the repository index loads public repositories directly from GitHub's unauthenticated API.
+A compact, responsive portfolio built with plain HTML, CSS and JavaScript. Featured project cards are authored in `index.html`; `app.js` handles the searchable GitHub repository list and the browser-side Huffman algorithm demonstration.
 
-Each selected project opens an in-page presentation with its own visual identity and a short workflow. Several presentations include small browser demos (graph navigation, strategy trade-offs, sound keys, equal splitting, prompt review, sample news labels, and Huffman codes). These are explicitly labeled concept previews; they do not execute or claim to reproduce the original project implementations.
+The project descriptions are based on public repository documentation. SafeCross is included from the supplied portfolio brief; the linked public GitHub account does not contain its source repository, so the page says so and does not claim implementation details. The prompt-guard card distinguishes the contribution fork from its upstream repository. The Huffman panel implements byte-frequency tree construction, encoding and decoding in the browser; it does not claim to produce the repository's packed file format.
 
 ## Run locally
 
-Open `index.html` in a browser, or serve the project directory with any static file server. For example:
+Serve this directory with any static file server:
 
 ```sh
 python3 -m http.server 8000
 ```
 
-Then visit `http://localhost:8000`.
+Open `http://localhost:8000`. The site has no package dependencies or build step. When `repositories.json` is absent locally, the repository index falls back to GitHub's unauthenticated public API. If both sources are unavailable, featured project content remains usable.
 
-No build step, dependencies, API token, or secret is required. GitHub's public API is rate-limited for unauthenticated requests, so repository loading can pause temporarily if the public limit is reached; featured projects remain visible.
+## Deployment and repository data
 
-## Deploy
+`.github/workflows/pages.yml` publishes the repository root to GitHub Pages on pushes to `main` and on manual runs. Before deployment, it uses the workflow's short-lived GitHub token to build a JSON snapshot of the account's public repositories. The token is used only by the action and is never included in the deployed JavaScript or JSON. The site uses this snapshot first and falls back to the public API when no snapshot is available.
 
-The included GitHub Actions workflow publishes the repository root to GitHub Pages on pushes to `main` and on manual runs. In the repository's **Settings → Pages**, choose **GitHub Actions** as the build and deployment source if Pages has not been enabled yet.
+In repository **Settings → Pages**, select **GitHub Actions** as the deployment source if Pages has not been enabled.
 
-The site uses the public account endpoint at `https://api.github.com/users/Naksh-IIITB/repos`. Project notes in the selected-work section are curated locally; update `FEATURED` in `app.js` to adjust them.
+## Updating content
+
+- Edit the six statically authored cards and profile sections in `index.html`.
+- Add repository descriptions, display names and categories in `REPOSITORY_NOTES` in `app.js`.
+- The social preview is `assets/social-preview.jpg`; its editable vector source is `assets/social-preview.svg`.
+- Do not add a résumé link until an actual résumé PDF is available.
