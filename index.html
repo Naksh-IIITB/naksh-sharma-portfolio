@@ -4,13 +4,28 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#10110f">
-    <meta name="description" content="Selected work and open-source projects by Naksh Sharma.">
-    <title>Naksh Sharma — Selected work</title>
+    <meta name="description" content="Naksh Sharma is a B.Tech Data Science & AI student at IIIT Bangalore working on machine learning, NLP and AI systems.">
+    <link rel="canonical" href="https://naksh-iiitb.github.io/naksh-sharma-portfolio/">
+    <title>Naksh Sharma — Data Science & AI</title>
     <link rel="icon" href="./assets/mark.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Naksh Sharma">
+    <meta property="og:title" content="Naksh Sharma — Data Science & AI">
+    <meta property="og:description" content="Selected machine learning, NLP and AI systems projects by a B.Tech student at IIIT Bangalore.">
+    <meta property="og:url" content="https://naksh-iiitb.github.io/naksh-sharma-portfolio/">
+    <meta property="og:image" content="https://naksh-iiitb.github.io/naksh-sharma-portfolio/assets/social-preview.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Naksh Sharma — Data Science and AI portfolio">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Naksh Sharma — Data Science & AI">
+    <meta name="twitter:description" content="Selected machine learning, NLP and AI systems projects by a B.Tech student at IIIT Bangalore.">
+    <meta name="twitter:image" content="https://naksh-iiitb.github.io/naksh-sharma-portfolio/assets/social-preview.jpg">
     <script src="./app.js" defer></script>
   </head>
   <body>
@@ -21,80 +36,199 @@
         <span>NAKSH SHARMA</span>
       </a>
       <nav class="main-nav" aria-label="Main navigation">
-        <a href="#work">Selected work</a>
-        <a href="#archive">Repository index</a>
-        <a class="nav-github" href="https://github.com/Naksh-IIITB" target="_blank" rel="noreferrer">
-          GitHub <span aria-hidden="true">↗</span>
-        </a>
+        <a href="#about">About</a>
+        <a href="#work">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#repositories">Repositories</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
 
     <main id="main">
       <section class="hero page-shell" id="top" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow">PORTFOLIO / SOFTWARE PROJECTS</p>
+          <p class="eyebrow">B.TECH / DATA SCIENCE &amp; AI / IIIT BANGALORE</p>
           <h1 id="hero-title">Naksh Sharma</h1>
-          <p class="hero-intro">I'm a student at IIIT Bangalore interested in building software. My projects span machine learning, natural language processing, systems, and Formula 1 strategy.</p>
+          <p class="hero-intro">I build machine-learning and AI systems, with projects in local graph-based RAG, NLP and agentic guardrails. I’m interested in practical applications of machine learning, deep learning and computer vision.</p>
           <div class="hero-actions">
-            <a class="text-link" href="#work">Selected projects <span aria-hidden="true">↓</span></a>
-            <a class="text-link" href="https://github.com/Naksh-IIITB" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+            <a class="button button-primary" href="#work">Selected projects <span aria-hidden="true">↓</span></a>
+            <a class="button button-secondary" href="https://github.com/Naksh-IIITB" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
           </div>
         </div>
+        <aside class="hero-facts" aria-label="Portfolio focus">
+          <div><span>STUDY</span><strong>Data Science &amp; AI</strong></div>
+          <div><span>INTERESTS</span><strong>ML · NLP · Computer vision · AI systems</strong></div>
+          <div><span>PROJECTS</span><strong>Research prototypes · simulations · open source</strong></div>
+        </aside>
       </section>
 
-      <section class="work-section page-shell" id="work" aria-labelledby="work-title">
+      <section class="content-section page-shell" id="about" aria-labelledby="about-title">
         <div class="section-heading">
-          <div>
-            <p class="eyebrow">01 / PROJECTS</p>
-            <h2 id="work-title">Selected projects</h2>
-          </div>
-          <p class="section-note">A selection of individual projects and collaborations.</p>
+          <div><p class="eyebrow">01 / PROFILE</p><h2 id="about-title">About</h2></div>
+          <p class="section-note">A short introduction and the areas I’m exploring.</p>
         </div>
-        <div class="featured-grid" id="featured-grid" aria-live="polite">
-          <article class="project-card skeleton-card" aria-hidden="true"></article>
-          <article class="project-card skeleton-card" aria-hidden="true"></article>
-          <article class="project-card skeleton-card" aria-hidden="true"></article>
+        <div class="about-grid">
+          <p class="about-copy">I’m a B.Tech student in Data Science &amp; AI at IIIT Bangalore. I enjoy working across the path from data and models to usable software—from studying language models to building local AI applications and simulation tools.</p>
+          <div class="interest-list" aria-label="Areas of interest">
+            <span>Machine learning</span><span>Deep learning</span><span>Natural language processing</span><span>Computer vision</span><span>AI systems</span>
+          </div>
         </div>
       </section>
-      <dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title">
-        <div class="dialog-shell">
-          <button class="dialog-close" type="button" aria-label="Close project presentation">×</button>
-          <div id="project-detail"></div>
-        </div>
-      </dialog>
 
-      <section class="archive-section page-shell" id="archive" aria-labelledby="archive-title">
-        <div class="section-heading archive-heading">
-          <div>
-            <p class="eyebrow">02 / GITHUB</p>
-            <h2 id="archive-title">All repositories</h2>
+      <section class="content-section page-shell" id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">02 / SELECTED WORK</p><h2 id="work-title">Projects</h2></div>
+          <p class="section-note">Six projects, with source links where public repositories are available.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card tone-safecross" aria-labelledby="project-safecross">
+            <div class="project-topline"><span>HACKATHON / AI</span><span>01</span></div>
+            <h3 id="project-safecross">SafeCross</h3>
+            <p>An AI-based project for the Namma AI / NASSCOM hackathon. Its public source repository and implementation details are not available in the linked GitHub account.</p>
+            <div class="project-tags"><span>Hackathon project</span><span>AI</span></div>
+            <p class="project-note">Public source not available</p>
+          </article>
+
+          <article class="project-card tone-insight" aria-labelledby="project-insight">
+            <div class="project-topline"><span>LOCAL AI / RAG</span><span>02</span></div>
+            <h3 id="project-insight">InsightGraph</h3>
+            <p>Combines entity-graph and vector retrieval to answer questions across local PDF, Markdown and text documents, grounded in source passages.</p>
+            <div class="project-tags"><span>Python</span><span>NetworkX</span><span>ChromaDB</span><span>Ollama</span></div>
+            <a class="project-link" href="https://github.com/Naksh-IIITB/InsightGraph" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="project-card tone-race" aria-labelledby="project-racecraft">
+            <div class="project-topline"><span>SIMULATION / MOTORSPORT</span><span>03</span></div>
+            <h3 id="project-racecraft">RaceCraft</h3>
+            <p>A counterfactual F1 strategy simulator comparing pit-now, extend and compound-change decisions. Its race-state engine models tyre degradation, pit loss, traffic and safety-car scenarios; results are finish-position distributions.</p>
+            <div class="project-tags"><span>Python</span><span>Monte Carlo</span><span>FastF1 / OpenF1</span></div>
+            <a class="project-link" href="https://github.com/Naksh-IIITB/racecraft" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="project-card tone-news" aria-labelledby="project-news">
+            <div class="project-topline"><span>NLP / CLASSIFICATION</span><span>04</span></div>
+            <h3 id="project-news">NLP News Classifier</h3>
+            <p>An AG News study comparing sparse text features and classical models with contextual transformer embeddings, using reproducible training and evaluation stages.</p>
+            <div class="project-tags"><span>Python</span><span>scikit-learn</span><span>PyTorch</span><span>Transformers</span></div>
+            <details class="project-visual">
+              <summary>View committed model comparison</summary>
+              <img src="./assets/nlp-model-comparison.png" width="1980" height="1080" loading="lazy" alt="Model comparison chart committed in the NLP news classification repository">
+            </details>
+            <a class="project-link" href="https://github.com/Naksh-IIITB/sml-nlp-project" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="project-card tone-guard" aria-labelledby="project-guard">
+            <div class="project-topline"><span>OPEN SOURCE / AI SAFETY</span><span>05</span></div>
+            <h3 id="project-guard">Agentic Prompt Guard</h3>
+            <p>Contributor to an upstream prompt-guardrail system that screens for risky or disguised instructions and routes them through validation and safe-intent rewriting. My public commits add a Streamlit dashboard, dataset utilities and UI updates.</p>
+            <div class="project-tags"><span>Contributor</span><span>Python</span><span>Streamlit</span></div>
+            <div class="project-links">
+              <a class="project-link" href="https://github.com/Naksh-IIITB/agentic-prompt-guard" target="_blank" rel="noopener noreferrer">My fork <span aria-hidden="true">↗</span></a>
+              <a class="project-link project-link-muted" href="https://github.com/hemishsrichandra/agentic-prompt-guard" target="_blank" rel="noopener noreferrer">Upstream <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="project-card tone-fair" aria-labelledby="project-fairsplit">
+            <div class="project-topline"><span>TEAM PROJECT / AIVANCITY</span><span>06</span></div>
+            <h3 id="project-fairsplit">FairSplit</h3>
+            <p>Team project from an Aivancity AI workshop. The repository contains an end-to-end Kaggle House Prices regression workflow and separate responsible-AI and startup-analysis deliverables.</p>
+            <div class="project-tags"><span>Python</span><span>scikit-learn</span><span>Model ensembling</span></div>
+            <a class="project-link" href="https://github.com/Naksh-IIITB/aivancity_fairsplit" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section compact-section page-shell" id="huffman" aria-labelledby="huffman-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">03 / IN-BROWSER ALGORITHM</p><h2 id="huffman-title">Huffman coding</h2></div>
+          <a class="text-link" href="https://github.com/Naksh-IIITB/com-decomp" target="_blank" rel="noopener noreferrer">File compressor source <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="huffman-panel">
+          <div class="huffman-intro">
+            <p>Enter text to build a frequency tree, encode its UTF-8 bytes and decode the result in this browser.</p>
+            <label for="huffman-input">Text to encode</label>
+            <textarea id="huffman-input" rows="2" maxlength="160" spellcheck="false">banana bandana</textarea>
+            <p class="huffman-note">This demonstrates the repository’s Huffman coding algorithm. It does not create the repository’s packed file format or metadata header.</p>
           </div>
-          <p class="section-note">Public repositories loaded directly from GitHub.</p>
+          <div class="huffman-output" id="huffman-output" aria-live="polite" aria-busy="true">
+            <p class="muted">Building the coding table…</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section page-shell" id="skills" aria-labelledby="skills-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">04 / TOOLKIT</p><h2 id="skills-title">Technical skills</h2></div>
+          <p class="section-note">Technologies reflected in the public project repositories.</p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-group"><h3>Programming</h3><p>Python · Java · C++ · SQL</p></div>
+          <div class="skill-group"><h3>Machine learning</h3><p>scikit-learn · PyTorch · Transformers · pandas</p></div>
+          <div class="skill-group"><h3>AI systems</h3><p>RAG · Knowledge graphs · Ollama · Prompt guardrails</p></div>
+          <div class="skill-group"><h3>Data &amp; applications</h3><p>ChromaDB · NetworkX · MySQL · Streamlit</p></div>
+        </div>
+      </section>
+
+      <section class="content-section page-shell" id="experience" aria-labelledby="experience-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">05 / PROGRAMS</p><h2 id="experience-title">Hackathons &amp; workshops</h2></div>
+          <p class="section-note">Participation and project work; no awards or rankings are implied.</p>
+        </div>
+        <div class="experience-list">
+          <article><span>HACKATHON PROJECT</span><div><h3>Namma AI / NASSCOM</h3><p>SafeCross, an AI-based hackathon project. Public implementation details are not linked here.</p></div></article>
+          <article><span>HACKNIGHT PROJECT</span><div><h3>F1 Strategy Predictor</h3><p>A hybrid strategy-prediction and simulation project using race data, pace estimation and tyre/traffic heuristics.</p></div><a href="https://github.com/Naksh-IIITB/hacknight" target="_blank" rel="noopener noreferrer" aria-label="View F1 Strategy Predictor on GitHub">↗</a></article>
+          <article><span>TEAM WORKSHOP PROJECT</span><div><h3>IIIT Bangalore × Aivancity Paris</h3><p>AI and Big Data workshop project covering a House Prices regression workflow and responsible-AI analysis.</p></div><a href="https://github.com/Naksh-IIITB/aivancity_fairsplit" target="_blank" rel="noopener noreferrer" aria-label="View Aivancity workshop project on GitHub">↗</a></article>
+        </div>
+      </section>
+
+      <section class="content-section page-shell" id="repositories" aria-labelledby="repositories-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">06 / GITHUB</p><h2 id="repositories-title">All repositories</h2></div>
+          <p class="section-note">Public repositories from GitHub, searchable by name, description or language.</p>
         </div>
         <div class="archive-toolbar">
           <label class="search-wrap">
             <span class="sr-only">Search repositories</span>
             <svg aria-hidden="true" viewBox="0 0 20 20"><circle cx="8.5" cy="8.5" r="5.5"></circle><path d="m13 13 4 4"></path></svg>
-            <input id="repo-search" type="search" placeholder="Find a project..." autocomplete="off">
-            <kbd>/</kbd>
+            <input id="repo-search" type="search" placeholder="Find a repository…" autocomplete="off">
+            <kbd aria-hidden="true">/</kbd>
           </label>
-          <div class="archive-meta"><span id="repo-count">Loading repositories</span><span class="live-indicator"><i></i> LIVE FROM GITHUB</span></div>
+          <div class="archive-meta"><span id="repo-count">Loading repositories</span><span class="snapshot-status" id="repo-source">Loading GitHub data</span></div>
         </div>
         <div class="filter-row" id="filter-row" aria-label="Filter repositories by language">
-          <button class="filter-chip is-active" data-filter="all" type="button">All work</button>
+          <button class="filter-chip is-active" data-filter="all" type="button" aria-pressed="true">All work</button>
         </div>
         <div class="repo-list" id="repo-list" aria-live="polite" aria-busy="true">
           <div class="repo-skeleton"></div><div class="repo-skeleton"></div><div class="repo-skeleton"></div>
         </div>
         <div class="repo-message" id="repo-message" role="status" hidden></div>
         <div class="archive-footer">
-          <a class="text-link" href="https://github.com/Naksh-IIITB?tab=repositories" target="_blank" rel="noreferrer">View repositories on GitHub <span aria-hidden="true">↗</span></a>
+          <span class="repo-attribution">Forks are marked and link to their upstream repository.</span>
+          <a class="text-link" href="https://github.com/Naksh-IIITB?tab=repositories" target="_blank" rel="noopener noreferrer">View repositories on GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section class="contact-section page-shell" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">07 / NEXT</p>
+          <h2 id="contact-title">Résumé &amp; contact</h2>
+        </div>
+        <div class="contact-grid">
+          <div class="resume-block">
+            <h3>Résumé</h3>
+            <p>A résumé PDF has not been added, so there is no download link yet.</p>
+          </div>
+          <div class="contact-block">
+            <h3>Contact</h3>
+            <p>Email and LinkedIn are not listed on the public profile. GitHub is the available public contact route.</p>
+            <a class="button button-secondary" href="https://github.com/Naksh-IIITB" target="_blank" rel="noopener noreferrer">GitHub profile <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer page-shell">
-      <a class="wordmark footer-wordmark" href="#top"><span class="wordmark-mark">N<span>.</span></span><span>NAKSH SHARMA</span></a>
+      <a class="wordmark footer-wordmark" href="#top" aria-label="Back to top"><span class="wordmark-mark" aria-hidden="true">N<span>.</span></span><span>NAKSH SHARMA</span></a>
       <p>© 2026 Naksh Sharma</p>
       <a href="#top" class="back-to-top">BACK TO TOP ↑</a>
     </footer>

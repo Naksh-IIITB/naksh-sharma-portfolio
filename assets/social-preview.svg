@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">Naksh Sharma — Data Science and AI</title>
+  <desc id="description">Portfolio preview featuring selected machine learning, NLP and AI systems projects.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17201b"/>
+      <stop offset=".58" stop-color="#10110f"/>
+      <stop offset="1" stop-color="#171916"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#65d8ce"/>
+      <stop offset="1" stop-color="#c1cc98"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#background)"/>
+  <path d="M56 48h1088v534H56z" fill="none" stroke="#394039" stroke-width="2"/>
+  <path d="M56 49h182" stroke="url(#accent)" stroke-width="4"/>
+  <g fill="none" stroke="#65d8ce" stroke-opacity=".5" stroke-width="2">
+    <path d="m850 173 101-64 91 81 87-104m-178 87 36 127 119 23 23-133m-178-17 153-87"/>
+    <circle cx="850" cy="173" r="8" fill="#17201b"/>
+    <circle cx="951" cy="109" r="8" fill="#17201b"/>
+    <circle cx="1042" cy="190" r="8" fill="#17201b"/>
+    <circle cx="1129" cy="86" r="8" fill="#17201b"/>
+    <circle cx="987" cy="317" r="8" fill="#17201b"/>
+    <circle cx="1106" cy="340" r="8" fill="#17201b"/>
+    <circle cx="1129" cy="207" r="8" fill="#17201b"/>
+  </g>
+  <rect x="104" y="106" width="44" height="44" rx="4" fill="none" stroke="#c1cc98" stroke-width="2"/>
+  <text x="126" y="137" fill="#c1cc98" font-family="Arial,sans-serif" font-size="27" font-weight="700" text-anchor="middle">N</text>
+  <text x="104" y="220" fill="#a4a69e" font-family="monospace" font-size="17" letter-spacing="3">B.TECH / DATA SCIENCE &amp; AI / IIIT BANGALORE</text>
+  <text x="100" y="313" fill="#f0efe9" font-family="Arial,sans-serif" font-size="72" font-weight="700" letter-spacing="-3">Naksh Sharma</text>
+  <text x="104" y="366" fill="#b0b2aa" font-family="Arial,sans-serif" font-size="24">Machine learning · NLP · AI systems</text>
+  <path d="M104 423h672" stroke="#394039"/>
+  <g fill="#c9ccc3" font-family="monospace" font-size="15" letter-spacing="1">
+    <text x="104" y="465">INSIGHTGRAPH</text>
+    <text x="300" y="465">RACECRAFT</text>
+    <text x="454" y="465">NLP CLASSIFIER</text>
+    <text x="104" y="505">PROMPT GUARD</text>
+    <text x="300" y="505">FAIRSPLIT</text>
+    <text x="454" y="505">SAFECROSS</text>
+  </g>
+  <text x="104" y="557" fill="#83877e" font-family="monospace" font-size="12" letter-spacing="2">NAKSH-IIITB.GITHUB.IO/NAKSH-SHARMA-PORTFOLIO</text>
+</svg>
