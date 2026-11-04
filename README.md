@@ -2,6 +2,8 @@
 
 A lightweight personal portfolio built with plain HTML, CSS, and JavaScript. The selected-work section gives a curated introduction to projects; the repository index loads public repositories directly from GitHub's unauthenticated API.
 
+Each selected project opens an in-page presentation with its own visual identity and a short workflow. Several presentations include small browser demos (graph navigation, strategy trade-offs, sound keys, equal splitting, prompt review, sample news labels, and Huffman codes). These are explicitly labeled concept previews; they do not execute or claim to reproduce the original project implementations.
+
 ## Run locally
 
 Open `index.html` in a browser, or serve the project directory with any static file server. For example:
