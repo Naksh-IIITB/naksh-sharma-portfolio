@@ -163,6 +163,8 @@ button { color: inherit; }
 .resume-block, .contact-block { padding: 13px; border: 1px solid #ffffff12; background: #151713; }
 .resume-block p, .contact-block p { margin: 0 0 11px; color: #999d93; font-size: 10px; line-height: 1.6; }
 .contact-block .button { min-height: 31px; font-size: 8px; }
+.contact-links { display: flex; flex-wrap: wrap; gap: 7px 13px; }
+.contact-links a { color: var(--acid); font-size: 10px; text-underline-offset: 3px; }
 .site-footer { min-height: 58px; display: flex; justify-content: space-between; align-items: center; gap: 12px; border-top: 1px solid #ffffff12; }
 .footer-wordmark { font-size: 8px; }
 .footer-wordmark .wordmark-mark { width: 25px; height: 25px; font-size: 13px; }
