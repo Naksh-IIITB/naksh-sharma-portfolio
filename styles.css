@@ -26,7 +26,7 @@ button { color: inherit; }
 .skip-link:focus { transform: translateY(0); }
 .site-header { height: 76px; padding: 0 max(40px, calc((100vw - 1120px) / 2)); display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,.07); }
 .wordmark { display: inline-flex; gap: 11px; align-items: center; font: 500 10px var(--mono); letter-spacing: .13em; }
-.wordmark-mark { display: grid; width: 31px; height: 31px; place-content: center; border: 1px solid #5b6547; color: var(--acid); font: 700 16px var(--display); letter-spacing: -.08em; }
+.wordmark-mark { display: flex; width: 31px; height: 31px; align-items: baseline; justify-content: center; border: 1px solid #5b6547; color: var(--acid); font: 700 16px/1 var(--display); letter-spacing: -.08em; }
 .wordmark-mark span { color: var(--ink); }
 .main-nav { display: flex; align-items: center; gap: 35px; color: #b6b8b0; font-size: 12px; }
 .main-nav a, .text-link, .back-to-top { transition: color .2s ease; }
