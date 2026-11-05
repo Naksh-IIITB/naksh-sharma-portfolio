@@ -1,4 +1,5 @@
 const ACCOUNT = "Naksh-IIITB";
+const HIDDEN_REPOSITORIES = new Set(["battleship"]);
 
 const REPOSITORY_NOTES = {
   "safecross": {
@@ -174,7 +175,7 @@ async function fetchSnapshot() {
   if (!response.ok) throw new Error("No deployment snapshot is available.");
   const data = await response.json();
   if (!Array.isArray(data)) throw new Error("The deployment snapshot has an unexpected format.");
-  return data.filter((repo) => repo && !repo.private && typeof repo.name === "string");
+  return data.filter((repo) => repo && !repo.private && typeof repo.name === "string" && !HIDDEN_REPOSITORIES.has(normalize(repo.name)));
 }
 
 async function fetchAllRepositories() {
@@ -189,7 +190,7 @@ async function fetchAllRepositories() {
     }
     const page = await response.json();
     if (!Array.isArray(page)) throw new Error("GitHub returned an unexpected repository list.");
-    all.push(...page.filter((repo) => !repo.private));
+    all.push(...page.filter((repo) => !repo.private && !HIDDEN_REPOSITORIES.has(normalize(repo.name))));
     const nextLink = response.headers.get("Link")?.split(",").find((part) => part.includes('rel="next"'));
     url = nextLink?.match(/<([^>]+)>/)?.[1] || "";
   }
